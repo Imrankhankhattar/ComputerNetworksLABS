@@ -18,6 +18,5 @@ def main():
         print("client Connnected with server1",addr)
         data=c.recv(2048).decode("utf-8")
         time.sleep(0.5)
-        print(data)
         c.send(data.encode("utf-8"))
 main()
