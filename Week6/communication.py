@@ -15,7 +15,7 @@ def communicate(ADDRESS,PORT):
     print('\x1b[7;30;42m' + 'Server Responce :'+ data + '\x1b[0m')
     choice=input("If you want to CONTINUE communication press y else n: ")
     if(choice=="y"):
-        communicate()
+        communicate("localhost",6667)
     else:
         print("Diconnecting with server......")
         time.sleep(2)

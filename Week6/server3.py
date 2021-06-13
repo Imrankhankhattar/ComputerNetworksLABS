@@ -1,3 +1,4 @@
+#palindrom server
 # first of all import the socket library
 import socket 
 from threading import Thread
@@ -7,9 +8,15 @@ from Threads import CommonThread
 s = socket.socket() 
 ADDRESS="localhost"
 PORT = 8888 
-print("Server1 STARTED")
+print("Server3 STARTED")
 def Palindrome(s):
-    return s[::-1]
+    return s==s[::-1]
+def checkpalindrome(s):
+    if(Palindrome(s)):
+        return "Yes! the string is palindrome....."
+    else:
+        return "No !the string is not palindrome....."    
+
 def main():
     s=socket.socket()
     s.bind((ADDRESS,PORT))
@@ -19,6 +26,6 @@ def main():
         print("client Connnected with server3",addr)
         data=c.recv(2048).decode("utf-8")
         time.sleep(0.5)
-        c.send(Palindrome(data).encode("utf-8"))
+        c.send(checkpalindrome(data).encode("utf-8"))
 main()
    

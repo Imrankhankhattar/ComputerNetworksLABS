@@ -8,7 +8,7 @@ from Threads import CommonThread
 s = socket.socket() 
 ADDRESS="localhost"
 PORT = 7777 
-print("Server1 STARTED")
+print("Server2 STARTED")
 def main():
     s=socket.socket()
     s.bind((ADDRESS,PORT))
