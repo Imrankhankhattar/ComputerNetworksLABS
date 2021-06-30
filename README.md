@@ -6,7 +6,7 @@
 ## Week 6 :
           Multi tier Authentication server .
 ## Week 7 :
-          Multi tier Authentication server with an extra identity servere to divide the load of main server.
+          Multi tier Authentication server with an extra identity servere to decrease  the load of main server.
 ## Week 8 :
           Client can request certain file to server which respond with the file.All this communication was done in bytes just like tcp does
 ## Week 9 :
