@@ -18,7 +18,7 @@ class CommonThread(Thread):
         time.sleep(0.5)
         password=self.client_socket.recv(2048)
         time.sleep(0.5)
-        if(username==password):
+        if(username==password and username=='server'):
             key=self.client_socket.recv(2048).decode(SCHEME)
             self.client_socket.send(checkvalidity(key).encode(SCHEME))
             return

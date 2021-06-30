@@ -28,12 +28,11 @@ def communicate(ADDRESS,PORT):
     c.send(password.encode(SCHEME))
     time.sleep(0.5)
     data=c.recv(1024).decode(SCHEME)
-    print('\x1b[7;30;42m' + 'Server Responce :'+ data + '\x1b[0m')
     if(data=="User Not Found"):
         pass
     else:
         print("User Authonticated..!")
-        print("Press e for echo ,p for palindrome,l for length checker")
+        print('\x1b[7;30;42m' +"Press e for echo ,p for palindrome,l for length checker"+ '\x1b[0m')
         choice=input("Enter service name please: ")
         c.send(choice.encode(SCHEME))
         time.sleep(0.5)
